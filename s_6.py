@@ -31,20 +31,22 @@
 # list_1 = [1,2,3,4,5]
 # list_2 = list(map(lambda x: x, list_1))
 # print(list_2)
-import math
+# import math
+#
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+#
+#
+# def find_farthest_orbit(orbits):
+#     s = [0]
+#     k = 0
+#     for i in orbits:
+#         if i[0] == i[1]:
+#             continue
+#         elif (math.pi * i[0] * i[1]) > s[0]:
+#             s[0] = (math.pi * i[0] * i[1])
+#             k = i
+#     return k
+#
+# print(find_farthest_orbit(orbits))
 
-orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 
-
-def find_farthest_orbit(orbits):
-    s = [0]
-    k = 0
-    for i in orbits:
-        if i[0] == i[1]:
-            continue
-        elif (math.pi * i[0] * i[1]) > s[0]:
-            s[0] = (math.pi * i[0] * i[1])
-            k = i
-    return k
-
-print(find_farthest_orbit(orbits))
