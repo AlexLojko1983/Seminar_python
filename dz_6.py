@@ -17,5 +17,4 @@ num_min = int(input('Введите минимум диапазана: '))
 num_max = int(input('Введите максимум диапазана: '))
 
 print(list_1 := [random.randint(1, 100) for i in range(15)])
-list_2 = [i for i in range(num_min, num_max)]
-print(list_3 := {list_1.index(i): i for i in list_1 if i in list_2})
+print(list_3 := {list_1.index(i): i for i in list_1 if num_min <= i <= num_max})
