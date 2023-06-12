@@ -47,5 +47,20 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+func = lambda x,y: x*y
+
+# for row in range(1,7):
+#     for colum in range(1, 7):
+#         a = lambda row,colum: row*colum
+list_2 = []
+i=0
 for row in range(1,7):
-    print([colum * row for colum in range(1, 7)])
+    list_2.append([])
+    for colum in range(1, 7):
+
+        list_2[i].append(func(row,colum))
+    i+=1
+
+for i in range(6):
+    print(list_2[i],end='\n')
+
