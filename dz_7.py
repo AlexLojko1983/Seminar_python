@@ -47,20 +47,20 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-func = lambda x,y: x*y
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    list_2 = []
+    i = 0
+    if num_rows < num_columns:
+        num_columns = num_rows
+    elif num_rows > num_columns:
+        num_rows = num_columns
+    for num_rows in range(1, num_rows + 1):
+        list_2.append([])
+        for num_columns in range(1, num_columns + 1):
+            list_2[i].append(round(operation(num_rows, num_columns), 2))
+        i += 1
+    for i in range(num_rows):
+        print(list_2[i], end='\n')
 
-# for row in range(1,7):
-#     for colum in range(1, 7):
-#         a = lambda row,colum: row*colum
-list_2 = []
-i=0
-for row in range(1,7):
-    list_2.append([])
-    for colum in range(1, 7):
 
-        list_2[i].append(func(row,colum))
-    i+=1
-
-for i in range(6):
-    print(list_2[i],end='\n')
-
+print_operation_table(lambda x, y: x / y, 5, 4)
